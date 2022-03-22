@@ -13,5 +13,5 @@ RUN apk add jq
 
 WORKDIR /var/task
 COPY ./entrypoint.sh /var/task/entrypoint.sh
-ENTRYPOINT ["sh","entrypoint.sh"]
+ENTRYPOINT ["sh","/var/task/entrypoint.sh"]
 

@@ -1,10 +1,14 @@
 SERVICE_ARN=$1
 STATUS=$( aws apprunner describe-service --service-arn $1 | jq -r ".Service.Status")
 DESIRED_STATUS="RUNNING"
-COUNTER=10
-ZERO=0
-while [ $COUNTER -ge $ZERO ]
+while true 
 do
-  echo "not true status is " $STATUS
-  COUNTER=$(($COUNTER - 1))
+ if [ $STATUS != $DESIRED_STATUS ]
+ then
+    sleep 10
+    STATUS=$( aws apprunner describe-service --service-arn $1 | jq -r ".Service.Status")
+ else
+  echo true
+  break
+ fi
 done
