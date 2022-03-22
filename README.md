@@ -13,9 +13,9 @@ This action polls the service and returns `true` when the service is ready.
 ## environment variables
 Required for aws cli 
 
-**AWS_ACCESS_KEY_ID**
-**AWS_SECRET_ACCESS_KEY**
-**AWS_DEFAULT_REGION**
+- **AWS_ACCESS_KEY_ID**
+- **AWS_SECRET_ACCESS_KEY**
+- **AWS_DEFAULT_REGION**
 
 ## Outputs 
 
