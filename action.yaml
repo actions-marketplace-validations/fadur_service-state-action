@@ -1,0 +1,13 @@
+name: 'Apprunner service state action'
+author: 'Feisal Adur'
+description: 'checks the service state while service is being created'
+inputs:
+  Service-Arn:
+    description: 'the service arn'
+    required: true
+runs:
+  using: 'docker'
+  main: 'Dockerfile'
+branding:
+  icon: heart
+  color: green
